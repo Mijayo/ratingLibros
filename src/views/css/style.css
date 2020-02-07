@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contGlobal {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.h1TXT {
+    color: #007bff;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.contTXT {
+    /* border: 1px solid red; */
+}
+
+.lista {
+    /* border: 1px solid pink; */
+    width: 300px;
+    /* overflow: hidden; */
+}
+
+.libro {
+    /* border: 1px solid orange; */
+    width: 300px;
+}
+
+#mainID {
+    /* margin-top: 25px; */
+}
+
+.pS {
+    /* margin-top: 40px; */
+}
+
+.inputS {
+    margin-top: 20px;
+}
+
+#btnRegistrar {
+    margin-top: 40px;
+}
