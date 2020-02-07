@@ -1,0 +1,25 @@
+{
+    "name": "ratinglibros",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon ./src/server/server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Mijayo/ratingLibros.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Mijayo/ratingLibros/issues"
+    },
+    "homepage": "https://github.com/Mijayo/ratingLibros#readme",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "nodemon": "^2.0.2"
+    }
+}
