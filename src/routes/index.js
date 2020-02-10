@@ -1,35 +1,30 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
-// create application/json parser
+const Task = require('../model/task');
+
 const jsonParser = bodyParser.json();
-
-// create application/x-www-form-urlencoded parser
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
-router.post('/', urlencodedParser, (req, res) => {
-    const titulo = req.body.titulo;
-    const cali = req.body.estrella;
-    console.log(titulo);
-    res.send({
-        titulo,
-        cali
+// me pinta el index
+router.get('/', urlencodedParser, (req, res, next) => {
+    const tasks = Task.find();
+    res.render('index', {
+        tasks
     });
 });
 
-router.get('/', (req, res) => {
-    res.render('index');
-});
 
-router.get('/nosotros', (req, res) => {
-    res.render('nosotros');
-});
+// guardar los libros
+router.post('/guardar', urlencodedParser, async(req, res, next) => {
+    const task = new Task(req.body);
+    await task.save();
 
-router.get('/contacto', (req, res) => {
-    res.render('contacto');
+    // me redirecciona a la pagina principal
+    res.redirect('/');
 });
-
 
 module.exports = router;
