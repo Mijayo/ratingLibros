@@ -15,6 +15,21 @@
     margin-bottom: 40px;
 }
 
+input[type=text] {
+    color: #007bff;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+input[type=text]:nth-child(1) {
+    color: #007bff;
+    border: none;
+}
+
 .contTXT {
     /* border: 1px solid red; */
 }
@@ -36,10 +51,17 @@
 
 .pS {
     /* margin-top: 40px; */
+    color: #007bff;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .inputS {
     margin-top: 20px;
+}
+
+.mg {
+    margin-bottom: 40px;
 }
 
 #btnRegistrar {
