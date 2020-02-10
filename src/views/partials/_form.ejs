@@ -1,0 +1,29 @@
+<div class="contGlobal container">
+    <div class="contTXT">
+        <main id="mainID">
+            <form method="post" action="/">
+                <p class="pS">Nombre del libro</p>
+                <input class="inputS mg" id="titulo" name="titulo" type="text">
+                <p class="pS">Calificación</p>
+                <input class="inputS" type="range" id="" min="0" max="10" step="1" list="tickmarks" onchange="updateTextInput(this.value);">
+                <datalist id="tickmarks">
+                <option name="estrella" value="0"></option>
+                <option name="estrella" value="1"></option>
+                <option name="estrella" value="2"></option>
+                <option name="estrella" value="3"></option>
+                <option name="estrella" value="4"></option>
+                <option name="estrella" value="5"></option>
+                <option name="estrella" value="6"></option>
+                <option name="estrella" value="7"></option>
+                <option name="estrella" value="8"></option>
+                <option name="estrella" value="9"></option>
+                <option name="estrella" value="10" ></option>
+              </datalist>
+                <p>
+                    <input type="text" id="textInput" value="">
+                </p>
+                <br>
+                <input id="btnRegistrar" type="submit" value="registrar">
+            </form>
+        </main>
+    </div>
