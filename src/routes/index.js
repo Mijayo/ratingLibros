@@ -14,10 +14,10 @@ router.get('/', urlencodedParser, (req, res) => {
 
 
 // guarda los libros en el JSON
-router.get('/guardar', (req, res) => {
+router.post('/guardar', (req, res) => {
 
-    const titulo = req.body.titulo;
-    const calificacion = req.body.valor;
+    let titulo = req.query.titulo;
+    let calificacion = req.query.valor;
 
     let arrayLocal = [];
 
