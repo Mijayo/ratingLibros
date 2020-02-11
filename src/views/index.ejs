@@ -1,31 +1,19 @@
 <%- include ('partials/_head') -%>
     <%- include ('partials/_header') -%>
         <%- include ('partials/_form') -%>
-            <a href="/cargar" id="btnRegistrar" class="cargar">cargar</a>
+            <a href="/cargar" id="btnCargar"> cargar libros</a>
             <section class="lista">
-
-                <% if(libro) { %>
-                    <% libro.forEach(element => { %>
-                        <div class="animated fadeIn ">
-                            <p class="titulo_libro">
-                                <%=element.nombre %>
-                            </p>
-                            <p class="estrellas">
-                                <%=element.valoracion%><i class="fas fa-star"></i></p>
-                        </div>
-                        <% }); %>
-                            <% }else{%>
-                                <div id="texto_vacio_bbdd">
-                                    <h4>No hay opiniones destacadas en este momento</h4>
-                                    <h3>¡ Agrega la tuya !</h3>
-                                </div>
-                                <% } %>
+                <article>
+                    <% if(libro) { %>
+                        <% libro.forEach(element => { %>
+                            <div class="animated fadeIn">
+                                <p class="titulo_libro">
+                                    <%=element.nombre %>
+                                        <%=element.valoracion%>&ensp;<i class="fas fa-star estrellas"></i>
+                                </p>
+                            </div>
+                            <% }); %>
+                                <% }%>
+                </article>
             </section>
-
-
-            <div class="libro">
-                <img src="./img/1.jpg" alt="">
-            </div>
-
-            </div>
             <%- include ('partials/_cierre') -%>

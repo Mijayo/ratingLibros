@@ -3,36 +3,39 @@
     padding: 0;
 }
 
+body {
+    background-image: url('../img/susan-yin-2JIvboGLeho-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .contGlobal {
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 600px;
+    max-width: 800px;
+    width: 800px;
+    border-radius: 15px;
+    box-shadow: 10px -2px 22px -4px rgb(0, 0, 0);
+    background-color: white;
 }
 
 .h1TXT {
+    /* border: 1px solid purple; */
     color: #007bff;
-    margin-top: 100px;
-    margin-bottom: 40px;
+    margin-top: 70px;
+    margin-bottom: 10px;
     text-transform: uppercase;
-}
-
-input[type=text] {
-    color: #007bff;
-    border: none;
-    border-bottom: 2px solid grey;
-}
-
-input[type=text]:focus {
-    outline: none;
-}
-
-input[type=text]:nth-child(1) {
-    color: #007bff;
-    border: none;
+    text-align: center;
 }
 
 .contTXT {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 80px;
 }
 
 .lista {
@@ -40,19 +43,13 @@ input[type=text]:nth-child(1) {
     position: relative;
     min-height: 300px;
     max-height: 350px;
-    height: 800px;
-    width: 300px;
+    height: 900px;
+    width: 500px;
     overflow: auto;
     text-align: center;
-}
-
-.libro {
-    border: 1px solid orange;
-    width: 300px;
-}
-
-#mainID {
-    /* margin-top: 25px; */
+    z-index: 99;
+    top: -310px;
+    left: 270px;
 }
 
 .pS {
@@ -85,6 +82,49 @@ input[type=text]:nth-child(1) {
     cursor: pointer;
     color: white;
     background-color: #007bff;
+}
+
+#btnCargar {
+    background-color: #2497E3;
+    position: fixed;
+    color: white;
+    font-size: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    /* margin-top: -20px; */
+    text-decoration: none;
+}
+
+#btnCargar:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #007bff;
+}
+
+.estrellas {
+    color: rgb(255, 208, 0);
+}
+
+.titulo_libro {
+    color: #007bff;
+}
+
+input[type=text] {
+    color: #007bff;
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+input[type=text]:nth-child(1) {
+    color: #007bff;
+    border: none;
 }
 
 input[type=range] {

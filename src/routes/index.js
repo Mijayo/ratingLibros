@@ -36,21 +36,13 @@ router.get('/guardar', (req, res) => {
 router.get('/cargar', urlencodedParser, (req, res) => {
 
     let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
-    let pepe = JSON.parse(contenido);
+    let cont = JSON.parse(contenido);
 
     let v = [];
-
-    pepe.forEach(element => {
+    cont.forEach(element => {
         v.push(element);
-        console.log(element);
     });
-
-    // console.log(contenido);
-
-    // res.setHeader("content-type", "text/json");
-    // res.send(contenido);
     res.render('index', { "libro": v });
-
 });
 
 module.exports = router;
