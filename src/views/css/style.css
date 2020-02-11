@@ -32,18 +32,22 @@ input[type=text]:nth-child(1) {
 }
 
 .contTXT {
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .lista {
     /* border: 1px solid pink; */
+    position: relative;
+    min-height: 300px;
+    max-height: 350px;
+    height: 800px;
     width: 300px;
-    overflow-y: scroll;
+    overflow: auto;
     text-align: center;
 }
 
 .libro {
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
     width: 300px;
 }
 

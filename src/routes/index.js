@@ -9,25 +9,25 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // me pinta el index
 router.get('/', urlencodedParser, (req, res) => {
-    res.render('index');
+    res.render('index', { "libro": [] });
 });
 
 
 // guarda los libros en el JSON
-router.post('/guardar', (req, res) => {
+router.get('/guardar', (req, res) => {
 
     let titulo = req.query.titulo;
     let calificacion = req.query.valor;
 
-    let arrayLocal = [];
-
     // obj libro
-    let libro = { nombre: titulo, valoracion: calificacion };
+    let libro = { "nombre": titulo, "valoracion": calificacion };
 
-    arrayLocal.push(libro);
+    let datos = JSON.parse(fs.readFileSync("./src/json/libros.json", "utf-8"));
+
+    datos.push(libro);
 
     // escribe los datos en el archivo json
-    fs.writeFileSync("./src/json/libros.json", JSON.stringify(arrayLocal));
+    fs.writeFileSync("./src/json/libros.json", JSON.stringify(datos));
 
     // me redirecciona a la pagina principal
     res.redirect('/');
@@ -36,9 +36,20 @@ router.post('/guardar', (req, res) => {
 router.get('/cargar', urlencodedParser, (req, res) => {
 
     let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
+    let pepe = JSON.parse(contenido);
 
-    res.setHeader("content-type", "text/json");
-    res.send(contenido);
+    let v = [];
+
+    pepe.forEach(element => {
+        v.push(element);
+        console.log(element);
+    });
+
+    // console.log(contenido);
+
+    // res.setHeader("content-type", "text/json");
+    // res.send(contenido);
+    res.render('index', { "libro": v });
 
 });
 

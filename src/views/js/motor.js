@@ -2,7 +2,7 @@ function updateTextInput(val) {
     document.getElementById('textInput').value = `${val} estrellas`;
 }
 
-document.querySelector(".carga").addEventListener("load", cargarJSON());
+/*document.querySelector(".carga").addEventListener("load", cargarJSON());
 
 function cargarJSON() {
     fetch("./json/libros.json")
@@ -49,4 +49,4 @@ function cargarJSON() {
         .catch(function(error) {
             console.log(error);
         });
-}
+}*/
