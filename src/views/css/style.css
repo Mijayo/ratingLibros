@@ -23,23 +23,20 @@ body {
 }
 
 .h1TXT {
-    /* border: 1px solid purple; */
     color: #007bff;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-bottom: 10px;
     text-transform: uppercase;
     text-align: center;
 }
 
 .contTXT {
-    /* border: 1px solid red; */
     width: 200px;
     margin-left: 50px;
     margin-top: 80px;
 }
 
 .lista {
-    /* border: 1px solid pink; */
     position: relative;
     min-height: 300px;
     max-height: 350px;
@@ -157,7 +154,6 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    animate: 0.2s;
     box-shadow: 0px 0px 0px #000000;
     background: #2497E3;
     border-radius: 1px;
@@ -184,7 +180,6 @@ input[type=range]::-moz-range-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    animate: 0.2s;
     box-shadow: 0px 0px 0px #000000;
     background: #2497E3;
     border-radius: 1px;
@@ -205,7 +200,6 @@ input[type=range]::-ms-track {
     width: 100%;
     height: 5px;
     cursor: pointer;
-    animate: 0.2s;
     background: transparent;
     border-color: transparent;
     color: transparent;
