@@ -37,12 +37,16 @@ router.get('/cargar', urlencodedParser, (req, res) => {
 
     let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
     let cont = JSON.parse(contenido);
+    if (cont === " ") {
 
-    let v = [];
-    cont.forEach(element => {
-        v.push(element);
-    });
-    res.render('index', { "libro": v });
+    } else {
+        let v = [];
+        cont.forEach(element => {
+            v.push(element);
+        });
+        res.render('index', { "libro": v });
+    }
+
 });
 
 module.exports = router;

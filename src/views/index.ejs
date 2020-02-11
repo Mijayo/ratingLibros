@@ -1,12 +1,12 @@
 <%- include ('partials/_head') -%>
     <%- include ('partials/_header') -%>
         <%- include ('partials/_form') -%>
-            <a href="/cargar" id="btnCargar"> cargar libros</a>
+            <a href="/cargar" id="btnCargar" onclick="libroLoaded()">cargar libros</a>
             <section class="lista">
                 <article>
                     <% if(libro) { %>
                         <% libro.forEach(element => { %>
-                            <div class="animated fadeIn">
+                            <div>
                                 <p class="titulo_libro">
                                     <%=element.nombre %>
                                         <%=element.valoracion%>&ensp;<i class="fas fa-star estrellas"></i>
