@@ -37,16 +37,20 @@ router.get('/cargar', urlencodedParser, (req, res) => {
 
     let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
     let cont = JSON.parse(contenido);
-    if (cont === " ") {
 
-    } else {
-        let v = [];
-        cont.forEach(element => {
-            v.push(element);
-        });
-        res.render('index', { "libro": v });
-    }
+    let v = [];
+    cont.forEach(element => {
+        v.push(element);
+    });
+    res.render('index', { "libro": v });
 
+});
+
+router.get("/librojson", (req, res) => {
+    let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
+
+    res.setHeader("content-type", "text/json");
+    res.send(contenido);
 });
 
 module.exports = router;

@@ -94,7 +94,6 @@ body {
     border: none;
     outline: none;
     padding: 10px;
-    /* margin-top: -20px; */
     text-decoration: none;
 }
 
@@ -106,6 +105,22 @@ body {
 
 .estrellas {
     color: rgb(255, 208, 0);
+}
+
+#lJson {
+    color: grey;
+    font-size: 10px;
+    position: absolute;
+    top: 87vh;
+    left: 72%;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#lJson:hover {
+    color: white;
+    background-color: #007bff;
+    text-decoration: none;
 }
 
 .titulo_libro {
