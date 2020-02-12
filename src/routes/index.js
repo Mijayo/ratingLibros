@@ -16,10 +16,11 @@ router.get('/', urlencodedParser, (req, res) => {
 // guarda los libros en el JSON
 router.get('/guardar', (req, res) => {
 
+    // guardo los datos del form en variables
     let titulo = req.query.titulo;
     let calificacion = req.query.valor;
 
-    // obj libro
+    // creo el obj libro
     let libro = { "nombre": titulo, "valoracion": calificacion };
 
     let datos = JSON.parse(fs.readFileSync("./src/json/libros.json", "utf-8"));
@@ -33,22 +34,31 @@ router.get('/guardar', (req, res) => {
     res.redirect('/');
 });
 
+// btn de cargar libros
 router.get('/cargar', urlencodedParser, (req, res) => {
 
+    // lee el contenido del archivo libros.json
     let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
     let cont = JSON.parse(contenido);
 
+    // arrya local
     let v = [];
+    // for each del contenido en libros.json
     cont.forEach(element => {
         v.push(element);
     });
-    res.render('index', { "libro": v });
 
+    // renderizo el index y le paso el array local
+    res.render('index', { "libro": v });
 });
 
+
+// btn que me pinta los libros en formato JSON
 router.get("/librojson", (req, res) => {
+    // lee el archivo libros.json
     let contenido = fs.readFileSync("./src/json/libros.json", "utf-8");
 
+    // seteo la cabecera a json
     res.setHeader("content-type", "text/json");
     res.send(contenido);
 });
